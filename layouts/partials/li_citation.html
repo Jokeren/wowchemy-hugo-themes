@@ -8,11 +8,13 @@
   <span itemprop="author" class="article-metadata">
     {{ partial "page_metadata_authors" . }}
   </span><br>
+  <span class="article-metadata">
   {{ if .Params.publication_short }}
   {{- .Params.publication_short | markdownify -}}.
   {{ else if .Params.publication }}
   {{- .Params.publication | markdownify -}}.
   {{ end }}
+  </span>
   <p>{{ partial "page_links" (dict "content" . "is_list" 1) }}</p>
 
   {{/* MLA Style */}}
